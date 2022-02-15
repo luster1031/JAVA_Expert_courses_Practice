@@ -15,7 +15,7 @@
 
 
 ### 엘리먼트
-+ Block level
+1. Block level
     + 기본
     + 무조건 떨어짐
     + 자기 영역이 있음. 
@@ -23,7 +23,7 @@
     + 백그라운드 깔 수 있음
     + p, h1~h2, table, form ...
 
-+ inline level
+2. inline level
     + 아무리 떨어트려도 밑으로 
         ```html
         <!DOCTYPE html>
@@ -65,14 +65,14 @@
     + 레이아웃
 + span
     + 인라인레벨 엘리먼트를 그룹으로 묶을 때
-```html
-<p>
-    <span style="background-color:#00f; color:#ffff">
-        문장인데, <em>강조할 키워드</em>도 있을 거고<br/>
-        더 <strong>강조해야할 키워드</strong> 있을 겁니다.
-    </span>
-</p>
-```
+    ```html
+    <p>
+        <span style="background-color:#00f; color:#ffff">
+            문장인데, <em>강조할 키워드</em>도 있을 거고<br/>
+            더 <strong>강조해야할 키워드</strong> 있을 겁니다.
+        </span>
+    </p>
+    ```
 
 
 ### CSS
@@ -86,14 +86,14 @@
 ### js
 ```html
 <form>
-	<input onfocus="i = 2+2;console.log(i)" type="text" placeholder="아이디"/>
-	<br/><br/>
-	<input type="password" placeholder="비밀번호"/>
+    <input onfocus="i = 2+2;console.log(i)" type="text" placeholder="아이디"/>
+    <br/><br/>
+    <input type="password" placeholder="비밀번호"/>
 </form>
 ```
 + 아이디에 포커스 잡히면 console에 4가 출력됨
 
-+ 함수
+1. 함수
     + 정의
         ```html
         function f(){
@@ -104,7 +104,7 @@
     + 호출
     ```
 
-+ this
+2. this
     + console.log(this)
         ```html
         <script>
@@ -177,73 +177,73 @@
         ```
         + 다른 곳 클릭하면 색 바뀐게 하얀색으로 다시 바뀜
     
-+ 종속 선택자
-    ```html
-    <!DOCTYPE HTML>
-    <html>
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>태그 선택자</title>
-    <style type="text/css">
-    input{
-        background-color:#fff;
-        padding: 5px;
-        border: 2px solid #03cf5d;
-        outline: none;
-    }
-    input.focused{
-        background-color:#e1e6f6
-    }
-    </style>
-    <script>
-    function onFocus(el){
-        //el.style.backgroundColor="#e1e6f6";
-        el.className="focused"
-    }
-    function onBlur(el){
-        //el.style.backgroundColor="#ffff";
-        el.className=""
-    }
-    </script>
-    </head>
-    <body>
-    <form>
-        <input 
-        onfocus="onFocus(this)"
-        onblur="onBlur(this)"
-        type="text" 
-        id = "user-id"
-        placeholder="아이디"/>
-        <br/><br/>
-        <input type="password" placeholder="비밀번호"/>
-    </form>
+### 종속 선택자
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>태그 선택자</title>
+<style type="text/css">
+input{
+    background-color:#fff;
+    padding: 5px;
+    border: 2px solid #03cf5d;
+    outline: none;
+}
+input.focused{
+    background-color:#e1e6f6
+}
+</style>
+<script>
+function onFocus(el){
+    //el.style.backgroundColor="#e1e6f6";
+    el.className="focused"
+}
+function onBlur(el){
+    //el.style.backgroundColor="#ffff";
+    el.className=""
+}
+</script>
+</head>
+<body>
+<form>
+    <input 
+    onfocus="onFocus(this)"
+    onblur="onBlur(this)"
+    type="text" 
+    id = "user-id"
+    placeholder="아이디"/>
+    <br/><br/>
+    <input type="password" placeholder="비밀번호"/>
+</form>
 
-    </body>
-    </html>
+</body>
+</html>
 
-    ```
-    + 디자이너가 해 놓으면, 개발자가 쓴다.
-    ```html
-    <script>
-    function changeBackground(el, className){
-        el.className = className;
-    }
+```
++ 디자이너가 해 놓으면, 개발자가 쓴다.
+```html
+<script>
+function changeBackground(el, className){
+    el.className = className;
+}
 
-    </script>
-    </head>
-    <body>
-    <form>
-        <input 
-        onfocus='changeBackground(this, "focused")'
-        onblur='changeBackground(this, "")'
-        type="text" 
-        id = "user-id"
-        placeholder="아이디"/>
-        <br/><br/>
-        <input type="password" placeholder="비밀번호"/>
-    </form>
-    ```
-    + line-heigth : 글자 높이 커짐
+</script>
+</head>
+<body>
+<form>
+    <input 
+    onfocus='changeBackground(this, "focused")'
+    onblur='changeBackground(this, "")'
+    type="text" 
+    id = "user-id"
+    placeholder="아이디"/>
+    <br/><br/>
+    <input type="password" placeholder="비밀번호"/>
+</form>
+```
++ line-heigth : 글자 높이 커짐
 
 ### 하위 선택자
 ### 수도 선택자
