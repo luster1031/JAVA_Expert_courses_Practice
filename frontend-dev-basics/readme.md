@@ -319,3 +319,60 @@ var intervalId = setInterval(function(){
     }
     ```
     + div 클릭하면 함수 실행됨
+
+# CSS - 박스모델
+### 1.마진과 패딩
++ width, height 지정
++ overflow
+    ```js
+    overflow-y:scroll;
+	overflow-y:auto;
+	overflow-y:hidden;
+    ```
+    + 스크롤 나오거나 숨김
+### 2. border
+> ch03/ex04.html
+```js
+.box8 {
+	border: 4px solid;
+	/*	12가지 속성, 방향, 컬러 스타일을 할 수 있다(예제 그 중에 3가지)	*/
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: green;
+	
+	/*	12가지 속성별 단축형 	*/
+	border-width: 1px 2px 3px 4px;	/*	T, R, L, B 	*/
+	border-width: 1px 2px 3px;		/*	T (R, L) B 	*/
+	border-width: 1px 2px;			/*	(T, R), (L, B) 	*/
+	border-width: 1px;				/*	(T, R, L, B)	*/
+	
+	border-style: dash dotted solid double;
+	border-color: red green blue black;
+	
+	/*	보통은 다음과 같은 방식을 사용한다. (4방향이 모두 width, color, style이 동일하다면,,, )	*/
+	border : 1px solid #111;
+	
+}
+```
+
+### 3. 백그라운드 이미지
+
+### 4. float를 이용한 박스모델 정렬
++ 박스 모델 위치
+    + 겹쳤다는 이야기는 절대 좌표에 있어야한다. 
+        + ```position: absolute;```을 줘야 ```left```, ```top```을 줄 수가 있다. 
+    + 순서
+        ```z-index: 15;```처럼 z-index로 주면 된다. 
++ float
+    ```js
+    float:left;
+    float:right;
+    ```
+    + 위치는 부모 밖으로 안 나감
+    + 
+
+# 글꼴 및 텍스트
++ 16px-> 1em
++ 들여 쓰기 : ```text-indent```
++ vertical-align : 수직 정렬하고자 할 때
+    + inline, table 일 때
