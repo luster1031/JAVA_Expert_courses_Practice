@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+*		{margin:0; padding:0 }
+body	{font-family: "맑은 고딕" 돋움; font-size: 0.75em; color: #333;}
+
+.header	{
+	width: 630px;
+	height: 100px;
+	margin:50px auto;
+}
+
+.header .logo, .header .search-box {
+	float: left;
+}
+
+.header .logo {
+	font-size: 0;
+	width: 222px;
+	height: 52px;
+	background: #fff url("/ch03/images/nsplite.png")  no-repeat 0 -158px / 457px 434px;
+}
+
+.search-box {
+	position:relative;
+	width: 408px;
+	height: 52px;
+}
+
+.search-box input, .search-box a {
+	display: block;
+}  
+
+.search-box input, .search-box .btn-search, .search-box  a {
+	float: right;
+}
+.search-box input{
+	width: 324px;
+	height: 42px;
+	border: 2px solid #19ce60;
+}
+#keyboard{
+	position: absolute;
+	top: 38%;
+	right: 85px;
+	font-size:0;
+	width: 20px;
+	height: 12px;
+	background-position: -420px -395px;
+	background-size: 457px 434px;
+	background-repeat: no-repeat;
+	background-image: url("/ch03/images/nsplite.png");
+	
+}
+#dropdown{
+	position: absolute;
+	top: 42%;
+    right: 65px;
+    z-index: 50;
+    border: 3px solid #73AD21;
+	font-size:0;
+    width: 10px;
+    height: 5px;
+    background-position: -408px -77px;
+    background-repeat: no-repeat;
+    background-size: 457px 434px;
+    background-image: url("/ch03/images/nsplite.png");
+    border: none;
+}
+.btn-search{
+    width: 56px;
+	height: 42px;
+    background-color: #19ce60;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    border: 2px solid #19ce60;
+}
+.search-box button{
+	position: absolute;
+	top: 28%;
+    right: 20px;
+	font-size:0;
+	width: 22px;
+	height: 22px;
+	background-position: -420px 0;
+    background-repeat: no-repeat;
+    background-size: 457px 434px;
+    background-image: url("/ch03/images/nsplite.png");
+    background-color: transparent;
+    border: none;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1 class="logo">네이버</h1>
+		<div class="search-box">
+			<div class="btn-search">
+				<button>돋보기</button>
+			</div>
+			<a href="#"  id="dropdown">드롭다운</a> 
+			<a href="#"  id="keyboard">키보드</a>
+			<input type='text' />
+		</div>
+	</div>
+</body>
+</html>
