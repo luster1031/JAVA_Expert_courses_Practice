@@ -1,22 +1,3 @@
-/* 
-변수와 데이터 타입
-[기본 타입(prinitive, 원시)]
-    - undefined
-    - number
-    - string
-    - boolean
-
-[객체]
-    - object
-        1. new 생성 함수
-    - function
-
-    [객체1] - object type
-    [객체2] - function type
-
-
-*/
-
 /*python은 다 객체 */
 
 console.log("=======기본 타입(prinitive, 원시)=======");
@@ -56,7 +37,50 @@ console.log("b2 : " + typeof(b2));    //    object
 console.log("o : " + typeof(o));    //    object
 console.log("a : " + typeof(a));    //    object
 
+// 객체 리터럴, 배열 리터럴
+var o2 = {};    // 빈 객체
+var a2 = [];    
+console.log("o2 : " + typeof(o2));    //    object
+console.log("a2 : " + typeof(a2));    //    object
+
+
+//  null
+var n = null;
+console.log("n: " + typeof(n));    //    object
+
+//  함수 
+var F = function(){
+}
+var o = new F();
+console.log("o: " + typeof(o));    //    object
+console.log("F: " + typeof(F));    //    function
+
 
 
 
 console.log("=======객체2: function type=======");
+function f1(a,b){
+    return a+b;
+}
+
+
+var f2 = function(a,b){
+    return a + b;
+}
+
+var f3 = new Function("a","b","return a+ b");
+console.log("f1 :" + typeof(f1));   //  function
+console.log("f2 :" + typeof(f2));   //  function
+console.log("f3 :" + typeof(f3));   //  function
+
+
+console.log("======= 원시타입과 원시타입의 Wrapper 객체는 구분없이 사용할 수 있다.=======");
+console.log(i+ i2);
+console.log(s + s2);
+
+
+//  원시 타입에 메소드가 호출 될 때, 
+//  원시 Wrapper 객체가 만들어져 메소드 후출이 일어난 뒤 사라진다. (유사객체)
+console.log("======= 원시타입도 메소드 호출이 가능하다. =======");
+console.log(b.valueOf());   //  원시타입인데 불러 쓸 수 있다.
+console.log(b2.valueOf());  //  객체라서 당연히 부를 수 있음
