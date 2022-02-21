@@ -1,4 +1,4 @@
-# 변수와 데이터 타입(data type)
+# [변수와 데이터 타입(data type)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex02.js)
 > ex02.js
 ### 1. 기본 타입(prinitive, 원시)
 
@@ -23,6 +23,7 @@
        - Boolean() => object type
        - Object() => object type
        - Array() => object type
+       - Data() => object type
        - Function만 예외 => object type 아님
      - 배열도 객체, 배열과 객체가 별 차이가 없음
        `var a = new Array(); `
@@ -107,7 +108,7 @@ console.log(b.valueOf());
 <br>
 
 
-# 자바스크립트 객체 1 : object 타입
+# [자바스크립트 객체 1 : object 타입](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex06.js)
 > ex06.js
 ### 1. 자바스크립트 객체는 object 타입과 function 타입 두 가지가 있다. 
 ### 2. 보통, function 타입의 객체는 '함수'라고 부른다. 
@@ -125,7 +126,7 @@ console.log(b.valueOf());
 
 <br>
 
-# 자바스크립트 객체 2 : function 타입
+# [자바스크립트 객체 2 : function 타입](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex07.js)
 > ex07.js
 + 일반 함수 (실행코드[알고리즘] 블록이 있는 객체, 관례에 따라 소문자로 시작)
 + 생성자 함수 (실행코드[객체초기화] 블록이 있는 객체, 관례에 따라 대문자로 시작)
@@ -137,7 +138,7 @@ console.log(b.valueOf());
 
 
 
-# 자바스크립트 객체 3 : 확장
+# [자바스크립트 객체 3 : 확장](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex08.js)
 > ex08.js
 + 기본 타입 (primitive type)은 확장 되지 않는다.
 <br>
@@ -146,16 +147,16 @@ console.log(b.valueOf());
 
 
 
-# 자바스크립트 객체 4 : prototype 기반의 상속과 오버라이딩 (자바스크립트 객체 지향 프로그래밍)
+# [자바스크립트 객체 4 : prototype 기반의 상속과 오버라이딩 (자바스크립트 객체 지향 프로그래밍)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex09.js)
 > ex09.js
-
++ 해당 함수가 없으면 부모로 올라가서 찾는다. 
 
 
 <br>
 
 <br>
 
-# ==, ===
+# [==, ===](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex03.js)
 > ex03.js
 ### 1. == : equality, 값의 동치성, 형변환
 ### 2. === : identity
@@ -169,7 +170,7 @@ console.log(b.valueOf());
 
 
 
-# 변수의 범위 (Scope)
+# [변수의 범위 (Scope)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex04.js)
 > ex04.js
 ### 1. 자바스크립트는 어휘에서 변수의 범위를 알 수 있다. 
 ### 2. ES6 이전
@@ -195,7 +196,7 @@ console.log(b.valueOf());
 
 <br>
 
-# 구문(statement)
+# [구문(statement)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex05.js)
 > ex05.js
 + 표현식을 구문으로 만든는 것 : 세미콜론
   + 실행을 하게 만든다. 
@@ -240,3 +241,40 @@ a
   + 자바스크립트 엔진이 에러없는 실행을 우선 원칙으로 1번과 2번을 판단해 낸다.
 
 
+<br>
+<br>
+
+# [배열](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex10.js)
+> ex10.js
+1. 내장 객체 (생성자 함수)로 배열 생성
+  + 배열을 생성할 때 크기 지정은 별 의미가 없음
+  + 동적으로 배열이 늘어남
+2. 리터럴 사용으로 배열 생성
+3. Array와 object 비교
+
+<br>
+<br>
+
+# [Array 메소드(Array.prototype)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex11.js)
++ concat
++ pop, push : stack 지원
+  + join
+  + reverse
+  + shift
+  + sort
+  + slice ★
+  + splice ★
+
+# [Array확장 (prototype 기반의 확장) : List 메소드 추가](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex12.js)
++ this 조심
+  + ```consloe.log(this)```를 통해서 꼭 확인해봐라
+
+# [function 타입의 객체 (함수)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex16.js)
++ 함수를 생성하는 방법
+  1. 함수 리터럴
+  2. 함수 리터럴(추천)
+  3. new 연산자와 함께 Function() 생성자 함수를 사용하는 방법
+  4. 익명(Anonymouse) 함수
++ 즉시 실행하는 함수
+  + 생성과 동시에 실행
+  
