@@ -11,6 +11,8 @@ console.log(typeof(myVar1) + " : " + typeof(myVar3));   // undefined : object
 console.log(myVar1 == myVar3);  //  true : 값비교 - javascript 마음
 console.log(myVar1 === myVar3); //  flase : type까지 비교함
 
+var fn = (a,b) => a+b;
+                
 
 
 console.log("=======================================");
