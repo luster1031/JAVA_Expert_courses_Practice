@@ -1,4 +1,3 @@
-# 과제
 ## practice
    + [과제 - 자바 연습문제](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/practice)
 
@@ -10,6 +9,9 @@
    + [jblog05](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/jblog/jblog05)
       + changed web.xml -> Initailizer 
 
+## [hanblog](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/hanblog)
+   + jblog 복습
+   
 ## mysite
    + [mysite02](https://github.com/luster1031/JAVA_Expert_courses_Practice)
       +  servlet + jsp(mvc)
