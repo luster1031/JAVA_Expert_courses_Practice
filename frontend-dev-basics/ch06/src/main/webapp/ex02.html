@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//	현재 모니터의 width 및 height 구하기
+var widthScreen = screen.width;
+var heightScreen = screen.height;
+console.log(widthScreen + ":" + heightScreen);
+
+var child = window.open("","","width=200,height=100");
+setTimeout(function(){
+	child.moveTo(0,0);
+	child.resizeTo(widthScreen, heightScreen);	//	창 크기 늘리기
+	setInterval(function(){
+		//	0.1초마다 가운데를 기준으로 사이즈를 줄이기
+		child.resizeBy(-20, -20);
+		child.moveBy(10,10);
+	},100);
+}, 2000);
+</script>
+</head>
+<body>
+	<h1>BOM(Browser Object Model)</h1>
+	<h2>2. screen 객체</h2>
+</body>
+</html>
