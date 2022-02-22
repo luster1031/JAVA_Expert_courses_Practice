@@ -277,4 +277,22 @@ a
   4. 익명(Anonymouse) 함수
 + 즉시 실행하는 함수
   + 생성과 동시에 실행
-  
++ 가변 파라미터 함수
+
+# [global Object](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex17.js)
++ global이 variable context를 참조하고 있음
+  ```js
+  n3 = '둘리3';
+  console.log(n3, global.n3); //  둘리3 둘리3
+  ```
++ var, let, const는 현재 모듈 안에서만 쓸 수 있다.
++  function의 객체 메소드 apply
+  + this 바꾸기
++ function의 객체 메소드 call
+
+
+# [String 객체 메소드 (String.prototype)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex13.js)
+
+# [URL 다루기](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex14.js)
+
+# [Date객체 메소드 (Date.prototype)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex15.js)
