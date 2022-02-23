@@ -41,26 +41,32 @@ ul, ol{
 	background-color: #fc6
 }
 </style>
-<script type="text/javascript"> 
-var liSelected=null;
-var onTableClicked=function(li){
-	li.className="selected";
-	if(liSelected !=null && liSelected != li){
-		liSelected.className="";
-	}
-	liSelected = li;
-	
-}
+<script type="text/javascript" src="tabbox.js"></script> 
+<script type="text/javascript">
+
+tabBox.init();
+
 </script>
+
 </head>
 <body>
 <div class="tab-box">
 	<ul>
+		<!-- 
+        
         <li onclick="onTableClicked(this)">메뉴 1</li>
         <li onclick="onTableClicked(this)">메뉴 2</li>
         <li onclick="onTableClicked(this)">메뉴 3</li>
         <li onclick="onTableClicked(this)">메뉴 4</li>
         <li onclick="onTableClicked(this)">메뉴 5</li>
+        
+         -->
+         
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+        <li>메뉴 3</li>
+        <li>메뉴 4</li>
+        <li>메뉴 5</li>
     </ul>
     <div>
     	탭뷰입니다.
