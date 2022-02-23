@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var imgElement = document.createElement('img');
+	imgElement.src='http://file3.instiz.net/data/cached_img/upload/2018/06/22/14/2439cadf98e7bebdabd174ed41ca0849.jpg';
+	imgElement.style.width = '200px';
+	imgElement.alt ='짱구';	 
+	imgElement.title="짱구사진"//	마우스 올라갔을 때 나오는 거
+	
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+	}, 2000);
+});
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>

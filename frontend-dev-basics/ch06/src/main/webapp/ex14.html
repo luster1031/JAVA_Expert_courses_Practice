@@ -3,6 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener('load', function(){
+	document
+		.getElementById("form-login")
+		.onsubmit=function(){
+			//return true; -> /user/auth로 감
+			//return false;	//	/user/auth로 안 감
+			
+			var inputEmail = document.getElementById('input-email');
+			if(inputEmail.value == ''){
+				alert('이메일이 비어 있습니다.');
+				inputEmail.focus();
+				return false;
+			}
+			var inputPassword = document.getElementById('input-password');
+			if(inputPassword.value == ''){
+				alert('비밀번호가 비어 있습니다.');
+				inputPassword.focus();
+				return false;
+			}
+
+			//validaation success
+			return true;
+		}
+ });
+ </script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

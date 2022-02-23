@@ -3,6 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var imgElement = document.createElement('img');
+	
+	//	(표준[property] + 비표준[property가 아님])속성(attibute)을 읽기/쓰기 위해서 setAttribute/getAttribute를 사용한다. 
+	//	속성 -> property
+	imgElement.setAttribute('src','http://file3.instiz.net/data/cached_img/upload/2018/06/22/14/2439cadf98e7bebdabd174ed41ca0849.jpg');
+	imgElement.setAttribute('style','width:200px');
+	imgElement.setAttribute('alt','짱구');	 
+	imgElement.setAttribute('title',"짱구사진");	//	마우스 올라갔을 때 나오는 거
+	
+	imgElement['no']=10;	//	property
+	imgElement.setAttribute('data-name','luster1031');	//	비표준 속성은 property가 될 수가 없음
+														//	사용 할때는 'data-' prefix를 달아준다.
+														//	getAttribute로 가지고와야함
+			
+	
+	//	속성을 변수에 담았을 때
+	var s = 'no';
+
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+		console.log(imgElement.getAttribute('no')/*attribute*/, imgElement['no']/*property*/);	//	null 10
+		console.log(imgElement.alt, imgElement['data-name'],imgElement.getAttribute('data-name'), imgElement[s]);	//	짱구 undefined luster1031 10
+	}, 2000);
+});
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
