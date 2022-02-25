@@ -3,11 +3,88 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>sample1</title>
-<link href='image-viewer.css' type='text/css' rel="stylesheet"/>
+<link href='image-viewer.css' type='text/css' rel="stylesheet" />
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+<!--  
 <script type="text/javascript" src="image-viewer.js"></script>
+-->
 <script>
-	imageViewer.init();
+	//imageViewer.init();
+	/*
+	 1. 이미지에 click을 했을 때도 이미지가 랜덤하게 바뀌게 끔
+	 2. 슬라이드 쇼
+	 - 버튼이 '슬라이드쇼 중지'바꾸기
+	 - 3초간격으로 이미지가 랜덤하게 바꾸기
+	 - 버튼을 누르면 슬라이드 쇼를 중지 -인터벌
+	 - 버튼이 '슬라이드쇼 시작'으로 
+	 3. imageViewer object로 캡슐화
+	 */
+	var images = [ {
+		name : "국화",
+		file : "Chrysanthemum.jpg"
+	}, {
+		name : "사막",
+		file : "Desert.jpg"
+	}, {
+		name : "수국",
+		file : "Hydrangeas.jpg"
+	}, {
+		name : "해파리",
+		file : "Jellyfish.jpg"
+	}, {
+		name : "코알라",
+		file : "Koala.jpg"
+	}, {
+		name : "등대",
+		file : "Lighthouse.jpg"
+	}, {
+		name : "펭귄",
+		file : "Penguins.jpg"
+	}, {
+		name : "툴립",
+		file : "Tulips.jpg"
+	} ];
+	
+	function changeImage() {
+		
+		console.log("이미지바꾸기");
+		console.log(this.setInterval);
+		
+		var index = Math.floor(Math.random() * (images.length - 1)) + 1;
+		$(".image-viewer img").attr({
+			alt : images[index].name,
+			src : 'images/' + images[index].file
+		});
+
+	}
+	
+	$(function() {
+		var interval = null;
+		var isStop = false;
+		$("#btn-change").click(function() {
+			changeImage();
+			$(".image-viewer #btn-slideshow").text('슬라이드쇼 중지');
+		});
+		$("img").click(function() {
+			changeImage();
+			$(".image-viewer #btn-slideshow").text('슬라이드쇼 중지');
+		});
+		$("#btn-slideshow").click(function() {
+			
+			if(!isStop){
+				interval = setInterval(changeImage,3000);
+				$(".image-viewer #btn-slideshow").text('슬라이드쇼 중지');
+				console.log(isStop);
+				isStop = true;
+			}
+			else{
+				console.log("중지");
+				clearInterval(interval);
+				$(".image-viewer #btn-slideshow").text('슬라이드쇼 시작');
+				isStop = false;
+			}
+		});
+	});
 </script>
 </head>
 <body>
@@ -17,7 +94,7 @@
 			<button id="btn-slideshow">슬라이드쇼 시작</button>
 		</div>
 		<div>
-			<img/>
+			<img src="" />
 		</div>
 	</div>
 </body>

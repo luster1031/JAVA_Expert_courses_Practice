@@ -376,3 +376,43 @@ var intervalId = setInterval(function(){
 + 들여 쓰기 : ```text-indent```
 + vertical-align : 수직 정렬하고자 할 때
     + inline, table 일 때
+    
+    
+# 돔의 추가
+### [befor](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex22.html)
++ dom트리 구조에서 형제를 만드는 것 
+
+### [after](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex23.html)
++ dom 트리 구조에서 뒤로 형제 만드는 것
+
+
+### [안에 넣기(prependTo)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex24.html)
++ 이동하면서 특정 태그와 텍스트 넣기
+
+
+### [appendTo](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex25.html)
++ 이동시키기
+
+### [insertBefore](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex26.html)
++ 앞으로 이동
+
+### [insertAfter](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex27.html)
++ 뒤로 이동
+
+
+### [wrap](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex28.html)
++ 개별적으로 하나로 감싼다.
+
+
+### [wrapAll](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex29.html)
++ parent() : traverse api
+
+
+### [replaceWith](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex30.html)
+
+### [remove](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex31.html)
++ 삭제
+
+### [attr](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/ch07/src/main/webapp/ex31.html)
++ 특정 사이트로 이동(새탭으로
+

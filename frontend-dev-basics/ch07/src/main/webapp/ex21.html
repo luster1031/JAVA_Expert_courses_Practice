@@ -6,12 +6,15 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		//	통신, 랜더링, 돔 반응
+		var htms = "<strong>" + "카타파하" + "</strong>";
+		$('#p1').append(htms);	
 	}, 1000);
 });
 </script>
 </head>
 <body>
-	<h1>DOM 조작 API - prepend()</h1>
+	<h1>DOM 조작 API - append() : 생성</h1>
 	
 	<p id="p1">
 		가다나라마바사아자차

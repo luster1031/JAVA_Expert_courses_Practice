@@ -6,6 +6,13 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		// 통신으로 가져오기
+		var html = "<strong>" + "가나다라" + "</strong>";	//	데이터에 태그 붙인거 =  랜더링
+		
+		//돔에 반영 -> dom api, react api쓰기
+		//dom api기반의 jquery
+		$('#p1').prepend(html);
+		
 	}, 1000);
 });
 </script>
