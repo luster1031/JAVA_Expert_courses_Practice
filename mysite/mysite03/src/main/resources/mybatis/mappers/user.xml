@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="user">
-	<select id="findByEmailAndPassword" parameterType="map" resultType="uservo">
+	<select id="findByEmailAndPassword" parameterType="map"
+		resultType="uservo">
 		<!-- map이면, key이름 넣어주면 됨 -->
 		<![CDATA[
 		
@@ -13,6 +14,11 @@
 	<select id="findByNo" parameterType="long" resultType="uservo">
 		<![CDATA[
 			select name, email, password, gender, role from user where no=#{no}
+		]]>
+	</select>
+	<select id="findByEmail" parameterType="String" resultType="uservo">
+		<![CDATA[
+			select no from user where email=#{email }
 		]]>
 	</select>
 
@@ -53,7 +59,7 @@
 		]]>
 
 	</update>
-	
+
 	<select id="findrole" parameterType="long" resultType="string">
 	<![CDATA[
 		select role from user where no=#{no}

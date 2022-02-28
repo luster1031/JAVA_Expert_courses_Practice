@@ -79,6 +79,13 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
+		<!-- jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.8</version>
+		</dependency>
 
 		<!-- MyBatis -->
 		<dependency>
@@ -145,7 +152,7 @@
 				<version>1.1</version>
 				<configuration>
 					<url>http://127.0.0.1:8080/manager/text</url>
-					<path>/fileupload</path>	
+					<path>/fileupload</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
