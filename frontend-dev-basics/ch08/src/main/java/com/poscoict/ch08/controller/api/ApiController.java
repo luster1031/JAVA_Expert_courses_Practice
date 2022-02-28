@@ -1,6 +1,7 @@
 package com.poscoict.ch08.controller.api;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -39,5 +40,28 @@ public class ApiController {
 		//	api 응답 통일
 		return JsonResult.success(vo);
 		//return JsonResult.fail("Exception....");
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/post01",method=RequestMethod.POST)
+	public Object post01(GuestbookVo vo) {		//	Json 방식이 아닌 form 방식으로 온다. 
+		//service -> repository: DB insert 성공한 후,
+		
+		System.out.println(vo.toString());
+		vo.setNo(1L);
+		vo.setPassword("");
+		return JsonResult.success(vo);
+	}
+	
+	//	Json(string)으로 온다.
+	@ResponseBody
+	@RequestMapping(value="/post02",method=RequestMethod.POST)
+	public Object post02(@RequestBody GuestbookVo vo) {		//	messageconverter가 파싱해줌
+		//service -> repository: DB insert 성공한 후,
+		
+		System.out.println(vo.toString());
+		vo.setNo(1L);
+		vo.setPassword("");
+		return JsonResult.success(vo);
 	}
 }
