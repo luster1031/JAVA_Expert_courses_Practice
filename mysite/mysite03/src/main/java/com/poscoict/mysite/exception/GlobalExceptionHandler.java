@@ -59,7 +59,7 @@ public class GlobalExceptionHandler {
 			OutputStream os = response.getOutputStream();	//	byte단위로 쓰는 것
 															//	string : ch가 모여있는거 (배열) -> 하나 당 3byte로 바꾸는 거
 			// encoding해야함 (charter를 byte로)
-			os.write(jsonString.getBytes());	// utf-8로 encoding 해라
+			os.write(jsonString.getBytes("utf-8"));	// utf-8로 encoding 해라
 			os.close();
 			
 		}else {

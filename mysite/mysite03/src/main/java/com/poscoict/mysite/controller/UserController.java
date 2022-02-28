@@ -52,7 +52,7 @@ public class UserController {
 			return "user/join";
 		}
 		System.out.println("join error 아님: "+ vo.toString());
-		userService.join(vo);
+		//userService.join(vo);
 		return "redirect:/user/joinsuccess";
 	}
 	
