@@ -23,10 +23,16 @@
 				</property>
 			</bean>
 			
-			<!-- XML message converter -->
+			<!-- 2. XML message converter -->
+			<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/xml; charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
 			
-			
-			<!-- JSON message converter -->
+			<!-- 3. JSON message converter -->
 			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>

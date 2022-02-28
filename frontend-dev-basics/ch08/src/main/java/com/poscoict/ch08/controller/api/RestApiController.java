@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.poscoict.ch08.controller.dao.JsonResult;
+import com.poscoict.ch08.controller.dto.JsonResult;
 import com.poscoict.ch08.controller.vo.UserVo;
 
 @RestController	//	responsebody 안 써 줘도 됨
@@ -76,6 +76,13 @@ public class RestApiController {
 		System.out.println("[delete no] : " + no);
 		System.out.println("[delete password] : " + password);
 		/*
+		 톰캣은 JSON으로 오는 걸 처리하지 못하기 때문
+		 그래서 파싱해주는게 messageconverter이 해줌
+		 
+		 reuquest안에 있어야 세팅을 할 수 있다. 
+		 delete메소들 왔을 때, request에 담아서(doget(request)) 톰캣이 해줘라
+		 
+		 
 		 delete는 톰캣이 해줘야하기 때문에
 		  server.xml에 delete 설정해줘야한다.
 		  <Connector 

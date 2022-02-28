@@ -6,17 +6,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/test")
 public class ApiTestController {
+	
+	//	string message converter
 	@RequestMapping("/text")
 	public String text() {
 		return "text";
 	}
-	
 	
 	@RequestMapping("/html")
 	public String html() {
 		return "html";
 	}
 	
+	
+	//	xml message converter
+	@RequestMapping("/xml")
+	public String xml() {
+		return "xml";
+	}
+	
+	
+	
+	//	Json message converter
 	@RequestMapping("/json01")
 	public String json01() {
 		return "json01";

@@ -1,4 +1,4 @@
-package com.poscoict.ch08.controller.dao;
+package com.poscoict.ch08.controller.dto;
 
 public class JsonResult {
 	private String result;		/*	"success" or "fail"		*/
