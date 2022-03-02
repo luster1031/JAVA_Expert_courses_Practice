@@ -15,7 +15,12 @@
 			select name, email, password, gender, role from user where no=#{no}
 		]]>
 	</select>
-
+	
+	<select id="findByEmail" parameterType="String" resultType="uservo">
+			<![CDATA[
+				select no from user where email=#{email }
+			]]>
+	</select>
 
 	<insert id="insert" parameterType="uservo">
 		<!-- <,>이런것들 때문에 -->
