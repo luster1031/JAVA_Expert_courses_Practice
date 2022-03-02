@@ -29,4 +29,8 @@ public class GuestbookRepository {
 	public int insert(GuestbookVo vo) {
 		return sqlSession.insert("guestbook.insert", vo);
 	}
+
+	public List<GuestbookVo> findByNo(Long startno) {
+		return sqlSession.selectList("guestbook.findByNo", startno);
+	}
 }

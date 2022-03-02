@@ -21,7 +21,15 @@
 			 order by reg_date desc
 		]]>
 	</select>
-
+	<select id="findByNo" parameterType="long" resultType="guestbookvo">
+		<![CDATA[
+			select no, name, message, date_format(reg_date,'%Y-%m-%d') 
+			from guestbook
+			where no <#{startno}
+			order by no desc
+			limit 0,3;
+		]]>
+	</select>
 	<delete id="delete" parameterType="map">
 		<![CDATA[
 		 	delete from guestbook where no = #{no} and password = #{password}
