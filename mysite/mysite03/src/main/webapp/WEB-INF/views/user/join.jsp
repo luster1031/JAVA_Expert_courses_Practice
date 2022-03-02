@@ -154,7 +154,6 @@ $(function(){
 						<form:radiobutton path="gender" value="female" label="여" checked="${userVo.gender== 'female'}"/>
 						<form:radiobutton path="gender" value="male" label="남" checked="${userVo.gender== 'male'}"/>
 					</fieldset>
-
 					<fieldset>
 						<legend>약관동의</legend>
 						<input id="agree-prov" type="checkbox" name="agreeProv" value="y">
