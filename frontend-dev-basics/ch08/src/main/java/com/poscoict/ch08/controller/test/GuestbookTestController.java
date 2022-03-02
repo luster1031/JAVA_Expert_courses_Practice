@@ -12,4 +12,14 @@ public class GuestbookTestController {
 	public String ex01() {
 		return "gb/ex01";
 	}
+//	add
+	@RequestMapping("/ex02")
+	public String ex02() {
+		return "gb/ex02";
+	}
+	
+	@RequestMapping("/ex03")
+	public String ex03() {
+		return "gb/ex03";
+	}
 }
