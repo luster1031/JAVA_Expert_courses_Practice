@@ -50,4 +50,9 @@ public class UserRepository {
 	public String findrole(Long no) {
 		return sqlSession.selectOne("user.findrole", no);
 	}
+
+
+	public UserVo findByEmail(String email) {
+		return sqlSession.selectOne("user.findByEmail", email);
+	}
 }
