@@ -155,7 +155,7 @@
 + 나중에 해야함
 + [참고](https://github.com/kickscar/javascript-practices/tree/main/TechNotes/javascript-practices/11.Development%20Environments)
 
-
+### [배포 실습](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/node-practices/distribution)
 
 
 ## 7. helloweb-ex01

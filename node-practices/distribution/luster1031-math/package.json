@@ -1,0 +1,11 @@
+{
+  "name": "luster1031-math",
+  "version": "1.0.0",
+  "description": "",
+  "main": "luster1031-math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
