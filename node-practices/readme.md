@@ -179,3 +179,11 @@
 ## 8. helloweb-ex02
 + express 프레임워크 O
 + 웹애플리케이션 만들어보기
+```
+npm init -y
+
+```
+```
+
+npm i express
+```
