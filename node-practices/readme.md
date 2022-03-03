@@ -133,8 +133,8 @@
 
 
 ## 5. ★ Module 
-+ require js
-+ ES6 Module System
++ ★ require js
++ ★ ES6 Module System
 
 ### 1. 코어 모듈 (fs, os, .... node에서 제공해주는 내장 모듈)
 ### 2. 파일 모듈 
@@ -146,13 +146,36 @@
     - 원격 배포에 있는 라이브러리
     - 로컬 배포
 
+[실습](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/node-practices/practice.md)
+
+
 
 ## 6. npmjs.com(npm registry)에 내 패키지 배포
-- 나중에 해야함
++ 원격 배포
++ 나중에 해야함
 + [참고](https://github.com/kickscar/javascript-practices/tree/main/TechNotes/javascript-practices/11.Development%20Environments)
 
+
+
+
 ## 7. helloweb-ex01
++ express 프레임워크 X
 + 맨바닥
++ 웹애플리케이션 만들어보기
+1. app01 : http : core module 기반
+2. app02 : http, fs(file system) : core module 기반
+3. app03 : connect, serve-static : npm package 기반
+    ```shell
+    npm i connect
+    npm i serve-static
+    ```
+    
+4. app04 : connect, serve-static, connect-route : npm package 기반
+    + url 조절 할 수 있음 (특정 url 사용)
+    ```shell
+    npm i connect-route
+    ```
 
 ## 8. helloweb-ex02
-+ express
++ express 프레임워크 O
++ 웹애플리케이션 만들어보기
