@@ -1,3 +1,8 @@
+# [node.js (modules practice)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/module.md)
++ node.js export 연습
+
+<br>
+
 # [변수와 데이터 타입(data type)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex02.js)
 > ex02.js
 ### 1. 기본 타입(prinitive, 원시)
@@ -296,3 +301,4 @@ a
 # [URL 다루기](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex14.js)
 
 # [Date객체 메소드 (Date.prototype)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/basics/ex15.js)
+
