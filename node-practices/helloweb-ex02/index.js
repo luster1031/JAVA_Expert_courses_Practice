@@ -27,8 +27,8 @@ const application = express()
         res.locals.res = res;
         next();         //  다음 라우터가 실행 될 수 있도록
     })
-    .use('/*',mainRouter)
     .use('/user',userRouter)
+    .use('/*',mainRouter)
     .use('/hello',helloRouter);
 
 
