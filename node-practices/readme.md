@@ -162,28 +162,89 @@
 + express 프레임워크 X
 + 맨바닥
 + 웹애플리케이션 만들어보기
-1. app01 : http : core module 기반
-2. app02 : http, fs(file system) : core module 기반
-3. app03 : connect, serve-static : npm package 기반
-    ```shell
-    npm i connect
-    npm i serve-static
-    ```
+### 1. app01 : http : core module 기반
+### 2. app02 : http, fs(file system) : core module 기반
+### 3. app03 : connect, serve-static : npm package 기반
+```shell
+npm i connect
+npm i serve-static
+```
     
-4. app04 : connect, serve-static, connect-route : npm package 기반
-    + url 조절 할 수 있음 (특정 url 사용)
-    ```shell
-    npm i connect-route
-    ```
+### 4. app04 : connect, serve-static, connect-route : npm package 기반
++ url 조절 할 수 있음 (특정 url 사용)
+```shell
+npm i connect-route
+```
+
 
 ## 8. helloweb-ex02
 + express 프레임워크 O
 + 웹애플리케이션 만들어보기
-```
+```bash
 npm init -y
 
 ```
-```
-
+```bash
 npm i express
 ```
+
+
+
+## view engine
++ ejs 설치
+```bash
+${helloweb-ex02}npm i ejs
+```
+### view engine
++ html 연결
+    + > routes/hello.js
+        ```js
+        //  3. view engine
+            const helloRouter = require('./routes/hello'); 
+            .
+            .
+            .
+            .set('views',path.join(__dirname, "views"))
+            .set('view engine', 'ejs')
+            .
+            .
+            .
+            .use('/hello',helloRouter);
+        ```
+
+    + > views/hello/01.js 
+        ```js
+        router.route('/01').get(function(req, res){
+            //  rendering하기 전에 DB만들어서 사용 가능
+            res.render('hello/01');
+        });
+        ```
+
++ 데이터 넘기기
+    + > views/hello/01.js 
+        ```js
+        router.route('/02').get(function(req, res){
+            const data={
+                no:req.query.no || ''/* null이 될 경우 기본값으로 */,
+                email:req.query.email
+            };
+            res.render('hello/02',data);
+        });
+        ```
+    + > views/hello/02.js 
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        </head>
+        <body>
+            <h1>Hello Web</h1>
+            <h2><%=no %></h2>
+            <h2><%=name %></h2>
+        </body>
+        </html>
+        ```
+        + 객체 부를 때 객체 속성 이름으로
+
+
+## api 어떻게 만들어지는가?
