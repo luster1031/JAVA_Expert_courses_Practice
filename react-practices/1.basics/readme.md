@@ -15,17 +15,55 @@ ${/ex00.cra} npm start
     + 작성된 대로 js 파일을 html에 링크
 
 
-## 3. ex02 : 애플리케이션1 : 애플리케이션 (파일)분리
+## [3. ex02 : 애플리케이션1 : 애플리케이션 (파일)분리](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex02)
 1. 복잡한 애플리케이션은 코드를 분리해서 개발하는 것이 원칙
 2. 애플리케이션 코드를 여러 js 파일로 옴기는 단순한 방식
     + 전통적인 분리 방식
     + 브라우저 js 파일의 로딩 순서를 보장하지 않는다. 
     + 복잡하고 분리 파일(모듈)이 많아지면 의존성 관리 자체가 불가능
 
-## 4. ex03 : 애플리케이션2 : ES6 모듈 시스템 기반으로 분리
+## [4. ex03 : 애플리케이션2 : ES6 모듈 시스템 기반으로 분리 - ES6 모듈 시스템](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex03)
+1. 프론트엔드 애플리케이션의 수십, 수백 개의 분리된 경우, 브라우저에서 이 모듈들을 import하는 것은 상당히 비 효율적이다.
+2. 프론트엔드 애플리케이션은 자바 스크립트 외에 다양한 에셋(css, image, font)에 로딩 동기화도 고려해야한다.
+    + 한번에 의존관계를 다 파악한 다음, 하나의 js파일로 바꾸는 방법 -> 번들 js : webpack
 
-## 5. ex04 : (합칠때)번들링
-+   webpack
+
+## [5. ex04 : (합칠때) 애플리케이션 번들링](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex04)
++ webpack
+1. webpack은 작게 분리된 많은 애플리케이션의 모듈(js, css, image, font)들의 **의존성을 분석**해서 하나의 JS 파일로 묶는 도구
+    + 의존관계를 트리로 만듦
+    + 전부를 js로 만듦
+    + browser에게 하나의 파일로 보냄
+2. 하나의 JS파일을 번들(buddle)이라고 하고, 묶는 작업을 번들링(buddling)이라고 한다.
+3. 번들링 단순히 모듈들의 하나의 파일로 묶는 작업만을 의미 하진 않는다.(bulid 작업도 함)
+4. 빌드 작업 
+    1. linting(ESLint, 문법 체크) 작업
+    2. document 작업(JSDoc) 작업
+    3. test(Mocha, jest) 작업
+    4. 난독화/ 압축(uglyfy) 작업
+        + 있는 코드 다 가져오는 것이 아닌, 많은 스페이스는 없애고 변수 명을 다 치환함
+    5. 번들링
+5. 자바스크립트 뿐만 아니라 다양한 에셋(image, css, font)들로 모듈로 취급
+6. 설치
+    ```bash
+    $ npm i -D webpack webpack-cli
+    $ npm .\node_modules\.bin\webpack --version (설치 확인)
+    $ npx webpack --version (설치 확인)
+    ```
+    + webpack은 es6지원하지 않는다.
+        > package.json
+        ```json
+        "type": "module",
+        ```
+        + 없애야함
+    + 파일명 dev-server.mjs로 고치기
+    + start 고치기
+        > package.json
+        ```json
+        "start": "node dev-server.mjs",
+        ```
+    + webpack실행    
+
 ## 6. ex05 : React API 기반의 애플리케이션 리팩토리
 + React(라이브러리이기때문에 API가 있음)
 + js 함수로 다 바뀜
