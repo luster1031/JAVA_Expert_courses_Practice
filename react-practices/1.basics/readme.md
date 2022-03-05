@@ -74,7 +74,7 @@ ${/ex00.cra} npm start
 
 ## 8. ex07 : ex00.cra Recofiguration (내가 직접 설정...)
 ## 9. ex08 : JSX Tutorial (문법에 대해)
-## [10. webpack-practices](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/webpack-practices)
+## [10. webpack-practices](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/webpack-practice)
 1. 커맨드 라인
 2. webpack.config.js
 3. dev-server
