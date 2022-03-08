@@ -78,7 +78,7 @@ ${/ex00.cra} npm start
         ```
     
 
-## 6. ex05 : React API 기반의 애플리케이션 리팩토리
+## 6. [ex05 : React API 기반의 애플리케이션 리팩토리](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex05)
 + React(라이브러리이기때문에 API가 있음)
 + js 함수로 다 바뀜
 
