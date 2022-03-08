@@ -82,7 +82,7 @@ ${/ex00.cra} npm start
 + React(라이브러리이기때문에 API가 있음)
 + js 함수로 다 바뀜
 
-## 7. ex06 : React JSX 기반의 애플리케이션 리팩토리 
+## 7. [ex06 : React JSX 기반의 애플리케이션 리팩토리 ](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex06)
 + xml script를 브라우저로 실행되려면 js code로 바꿔야 함
 + babel(transpile)
 
@@ -94,4 +94,4 @@ ${/ex00.cra} npm start
 3. dev-server
 4. css 적용
 5. scss 
-## 11. babel-practice
+## 11. [babel-practice](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/babel-practice)
