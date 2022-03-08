@@ -1,3 +1,4 @@
+## CSS 모듈 번들링 하기
 1. css파일 import
     > ./src/App.js
     ```js
@@ -21,7 +22,8 @@
 4. 실행 
 ```bash
 npm i
+npm i -D webpack-cli
+npm i -D webpack-dev-server
 npm i -D style-loader css-loader
-npm run build
 npm start
 ```

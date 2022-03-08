@@ -1,3 +1,4 @@
+## SASS/SCSS 모듈 번들링 하기
 1. css파일 import
     > ./src/App.js
     ```js
@@ -13,10 +14,12 @@
             }]
         },
     ``` 
-2. loader 다운 및 실행
-```bash
-npm i
-npm i sass-loader
-npm i node-sass sass-loader
-npm start
-```
+3. loader 다운 및 실행
+    ```bash
+    npm i
+    npm i -D webpack-cli
+    npm i -D webpack-dev-server
+    npm i -D sass-loader
+    npm i -D node-sass
+    npm start
+    ```

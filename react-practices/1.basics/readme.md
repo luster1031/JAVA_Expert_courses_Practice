@@ -26,7 +26,14 @@ ${/ex00.cra} npm start
 1. 프론트엔드 애플리케이션의 수십, 수백 개의 분리된 경우, 브라우저에서 이 모듈들을 import하는 것은 상당히 비 효율적이다.
 2. 프론트엔드 애플리케이션은 자바 스크립트 외에 다양한 에셋(css, image, font)에 로딩 동기화도 고려해야한다.
     + 한번에 의존관계를 다 파악한 다음, 하나의 js파일로 바꾸는 방법 -> 번들 js : webpack
+<br>
 
++ 서버 쪽에서 돌때는 package.json에 ```  "type": "module",``` module을 사용할 것이라는 걸 적어줌 
++ browser쪽에서 돌때는 index.html ```type="module"```에 적어줌
++ 의존성 트리를 browser가 만듦
++ 모듈간의 의존성을 못 맞춤
+    + 이미지 사이즈 줄이거나, 이미지를 뭘 하는 걸 못 함
+    + 하나의 자바 스크립트로 합쳐야함
 
 ## [5. ex04 : (합칠때) 애플리케이션 번들링](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex04)
 + webpack
@@ -63,6 +70,13 @@ ${/ex00.cra} npm start
         "start": "node dev-server.mjs",
         ```
     + webpack실행    
+7. package.json scripting("build" stage)
+8. ```$ npm run build```
+    + package.json 에 해놔서 가능
+        ```json 
+        "build":"npx webpack ./src/index.js -o ./public"
+        ```
+    
 
 ## 6. ex05 : React API 기반의 애플리케이션 리팩토리
 + React(라이브러리이기때문에 API가 있음)
