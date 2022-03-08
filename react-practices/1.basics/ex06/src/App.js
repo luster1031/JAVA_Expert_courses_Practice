@@ -1,4 +1,5 @@
 import React from "react";
+
 const App = function() {
   
     //  reactDom에 create하는 것
@@ -11,7 +12,7 @@ const App = function() {
     //  JSX
     return (
         <div>
-            <h1>(message)</h1>
+            <h1>{message}</h1>
         </div>
     );
     

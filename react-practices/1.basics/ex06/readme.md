@@ -36,3 +36,29 @@
         + 통신할 때 이런식으로 보내야함
         + 이렇게 돌리면 안 됨 -> div가 뭐냐고 물어봄
 
+3. 추가 설치
+    ```bash
+    $ npm i -D @babel/core @babel/cli @babel/preset-env @babel/preset-react
+    ```
+    + 태그로 되어있는 것들 react api로 해야함 - babel/react
+
+4. babel 설정
+    > babel.config.json 설정
+
+5. webpack.config.js 설정
+    + 모든 js를 바벨이 변환 시킴
+    + 내 코드만 변환시키기 위해서
+        + /node_modules를 빼줌
+            ```js
+            rules:[
+                {
+                    test:/\.js$/i,
+                    exclude:/node_modules/,
+                    use:['babel-loader']
+                }
+                ..[생략]..
+            ]
+            ```
+    ```bash
+    $ npm i -D babel-loader
+    ```

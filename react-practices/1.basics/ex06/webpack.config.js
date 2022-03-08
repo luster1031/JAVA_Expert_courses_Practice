@@ -9,14 +9,20 @@ module.exports = {
         assetModuleFilename: 'assets/images/[hash][ext]'
     },
     module:{
-        rules:[{
-            test:/\.(sa|sc|c)ss$/i,    //  어떤 파일이 나의 타겟인지 알려줘야함
-            use:['style-loader','css-loader','sass-loader']
-        },{
-            //  이미지와 관련된 rule
-            test : /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
-            type : 'asset/resource'
-        }]
+        rules:[
+            {
+                test:/\.js$/i,
+                exclude:/node_modules/,
+                use:['babel-loader']
+            },{
+                test:/\.(sa|sc|c)ss$/i,    //  어떤 파일이 나의 타겟인지 알려줘야함
+                use:['style-loader','css-loader','sass-loader']
+            },{
+                //  이미지와 관련된 rule
+                test : /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
+                type : 'asset/resource'
+            }
+        ]
     },
     devServer:{
         host:'0.0.0.0', //  아무대나 들어올 수 있음
