@@ -20,7 +20,7 @@ module.exports = {
             },{
                 //  이미지와 관련된 rule
                 test : /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
-                type : 'assets/resource'
+                type : 'asset/resource'
             }
         ]
     },
