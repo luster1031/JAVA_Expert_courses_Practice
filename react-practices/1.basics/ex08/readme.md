@@ -43,12 +43,62 @@
     ```
 + content
 + div쓰기 싫을 때 -> ```Fragment```사용
-## 04. Pure React(React API)로 컨포넌트 작성하기
-## 05. 클래스 컨포넌트 만들기
-## 06. 특징3 : JSX 표현식 표기법 - 값을 찍어내는 것
+## [04. Pure React(React API)로 컨포넌트 작성하기](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/04)
++ index.js
+    + ```<App />```대신 ```React.createElement(App, null)```
++ Header.js
+    + ```return (<h2>App04</h2>);```대신 ```return React.createElement('h2', null, 'App04');```
++ App.js
+    ```js
+    return (
+
+        <Fragment>
+            <Header/>
+            <Content/>
+        </Fragment>
+    );
+    ```
+    ```js
+    return React.createElement(
+       Fragment, 
+       null, 
+       /* 가변이기 때문에 */
+       React.createElement(Header, null),
+       React.createElement(Content, null)
+       );
+    ```
+
++ Content.js
+    ```js
+    return (
+        <p>Pure React(React API)로 컨포넌트 작성하기</p>
+    );
+    ```
+    ```js
+    return React.createElement('p', null, 'Pure React(React API)로 컨포넌트 작성하기');
+    ```
+## [05. 클래스 컨포넌트 만들기](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/05)
+1. Header.js
+    + Component
+        ```js
+        class Header extends Component{
+            render(){
+
+            }
+        }
+        ```
+
+## [06. 특징3 : JSX 표현식 표기법({js epression}과 문제점) - 값을 찍어내는 것](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/06)
 + ```<img src={logo}```
 + ```{expression}```표현식 넣는 것
 
-## 07. 특징4 : 공백
-## 08. Dynamic HTML Rendering
+
+## [07. Dynamic HTML Rendering](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/06)
++ ```<div dangerouslySetInnerHTML={{ __html : html}}/>```
+    + 추천하지 않는다.
+        + XSS : 크로스 사이트 스크립팅
+            + 보안에 취약함
+    + HTML 태그를 동적으로 생성하여 JSX element 의 특정 속성(dangerouslySetInnerHTML)으로 랜더링하는 작업은 금지하고 있지만, XSS(Cross-site Scripting) 보호 기능을 끄고 사용할 수 있다. 
+
+## 08. 특징4 : 공백
 ## 09. Comment
