@@ -86,8 +86,13 @@ ${/ex00.cra} npm start
 + xml script를 브라우저로 실행되려면 js code로 바꿔야 함
 + babel(transpile)
 
-## 8. ex07 : ex00.cra Recofiguration (내가 직접 설정...)
-## 9. ex08 : JSX Tutorial (문법에 대해)
+## 8. [ex07 : ex00.cra Recofiguration (내가 직접 설정...)](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex07)
+
+
+
+## [9. ex08 : JSX Tutorial (문법에 대해)](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08)
+
+
 ## [10. webpack-practices](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/webpack-practice)
 1. 커맨드 라인
 2. webpack.config.js
