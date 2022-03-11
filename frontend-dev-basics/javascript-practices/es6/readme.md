@@ -22,5 +22,17 @@ new Itest(){
     }
 }
 ```
-### [ex05 : ](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex05.js)
+### [ex05 : Arrow Function](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex05.js)
++ 화살표 함수
++ this는 어휘적으로 바인딩이 가능
 
+
+
+### [ex06 : 구조 분해(Destructing)](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex06.js)
+1. Default Value
+2. 구조분해해야 할 객체의 속성과 변수 이름이 다를 때
+3. 내부 객체 (Nested Object)의 구조 분해
+4. 함수의 파라미터
+
+
+### [ex07 : class](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex07.js)
