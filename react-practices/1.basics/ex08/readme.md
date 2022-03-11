@@ -101,4 +101,4 @@
     + HTML 태그를 동적으로 생성하여 JSX element 의 특정 속성(dangerouslySetInnerHTML)으로 랜더링하는 작업은 금지하고 있지만, XSS(Cross-site Scripting) 보호 기능을 끄고 사용할 수 있다. 
 
 ## 08. 특징4 : 공백
-## 09. Comment
+## [09. Comment](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/08)
