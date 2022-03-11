@@ -36,3 +36,16 @@ new Itest(){
 
 
 ### [ex07 : class](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex07.js)
++ 생성자 함수 기반
++ extends 상속
+
+### [ex08 : export ](https://github.com/luster1031/JAVA_Expert_courses_Practice/blob/master/frontend-dev-basics/javascript-practices/es6/ex08.mjs)
+1. unamed export
+2. 이름 없는 객체를 export
+3. 이름 있는 객체
+    1. 이 모듈을 import 할 때에는 destruting이 가능하다.
+        + named export는 import 대상이 다수이기 때문에 하나의 특정 이름으로 받을 수 없다.
+        + 대신 ```* as m```으로 사용 가능
+    2. import destruction
+4. export destruction
+5. name & unamed export
