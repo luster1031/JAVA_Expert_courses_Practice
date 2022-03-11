@@ -93,7 +93,7 @@
 + ```{expression}```표현식 넣는 것
 
 
-## [07. Dynamic HTML Rendering](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/06)
+## [07. Dynamic HTML Rendering](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/1.basics/ex08/src/07)
 + ```<div dangerouslySetInnerHTML={{ __html : html}}/>```
     + 추천하지 않는다.
         + XSS : 크로스 사이트 스크립팅
