@@ -14,10 +14,21 @@ module.exports = function(env) {
                 {
                     test:/\.js$/i,
                     exclude:/node_modules/,
-                    use:['babel-loader']
+                    loader :'babel-loader',
+                    options:{
+                        configFile:path.resolve('config/babel.config.json')
+                    }
                 },{
                     test:/\.(sa|sc|c)ss$/i,    //  어떤 파일이 나의 타겟인지 알려줘야함
-                    use:['style-loader','css-loader','sass-loader']
+                    use:[
+                        'style-loader',
+                        {
+                            loader:'css-loader',
+                            options:{
+                                modules:env['css-modules'] !== 'false'
+                            }
+                        },
+                        'sass-loader']
                 },{
                     //  이미지와 관련된 rule
                     test : /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
