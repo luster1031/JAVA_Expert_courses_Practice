@@ -13,3 +13,52 @@
         
     </ul>
     ```
+> App.js
+```js
+import React from 'react'
+import FoodList from './FoodList';
+
+const App = function() {
+    const foods = [{
+        no:1,
+        name : 'Bread',
+        quantity : 10
+    },{
+        no : 2,
+        name : 'Egg',
+        quantity:20
+    },{
+        no : 3,
+        name : 'Milk',
+        quantity:5
+    }];
+    return(
+        <div id="App">
+            <FoodList foods={foods}/>
+        </div>
+    );
+}
+
+export default App
+```
++ this. 쓰면 안됨 
+
+<br>
+
+> FoodList.js
+```js
+import React, { Component } from 'react'
+import FoodListItem from './FoodListItem';
+const FoodList = ({foods}) =>{
+    return(
+      <ul>
+          {foods.map((food) => <FoodListItem 
+                                  key={food.no}
+                                  name={food.name} 
+                                  quantity={food.quantity}/>)};
+      </ul>
+    )
+
+}
+export default FoodList;
+```

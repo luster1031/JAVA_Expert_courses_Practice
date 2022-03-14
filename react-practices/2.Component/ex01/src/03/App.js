@@ -17,7 +17,7 @@ const App = function() {
     }];
     return(
         <div id="App">
-            <FoodList foods={this.foods}/>
+            <FoodList foods={foods}/>
         </div>
     );
 
