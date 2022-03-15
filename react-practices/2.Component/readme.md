@@ -1,8 +1,8 @@
 # React Practices - Component
-### ex01 : Property
+### [ex01 : Property](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex01)
 1. Component 작성법
 2. Data Flow : Top -> Down 방식으로 데이터가 흐름
-### ex02 : Component styling
+### [ex02 : Component styling](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex02)
 ### ex03 : React Event
 ### ex04 : State ★
 ### ex05 : Component Lifecyle - 생명주기 함수들
