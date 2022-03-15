@@ -13,9 +13,16 @@
     + 모듈로 다루기
     + webpack.config.js에 옵션 추가 해야함
 + ```$npm run debug src=04 css-modules=true```
-### 05 예제 : SACC & SCSS
-### 06 예제 : 
-### 07 예제 : 
+### 05 예제 : SACC & SCSS 
++ css loader option : {module: true}
++ id와 class가 해싱됨
+```txt
+-----------------------------------------------
+CSS in JS(style Component), Less & Styleable
+-----------------------------------------------
+```
+### 06 예제 : Font Awesome : Working with UI I
+### 07 예제 : React Modal : Working with UI II
 ### 08 예제 : 
 ### 09 예제 : 
 
