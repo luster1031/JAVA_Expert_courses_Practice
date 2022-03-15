@@ -3,7 +3,15 @@
 1. Component 작성법
 2. Data Flow : Top -> Down 방식으로 데이터가 흐름
 ### [ex02 : Component styling](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex02)
-### ex03 : React Event
++ Inline Styling
++ Normal CSS
++ CSS Module
++ SACC & SCSS
+### [ex03 : React Event](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex03)
++ Inline Handler
++ Function Handler
++ Synthetic Event(이벤트 합성)
++ Event Handler 예제들
 ### ex04 : State ★
 ### ex05 : Component Lifecyle - 생명주기 함수들
 ### ex06 : Immutability(불변성) of Component's state
