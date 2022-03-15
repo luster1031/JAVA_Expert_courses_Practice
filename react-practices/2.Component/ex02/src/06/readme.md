@@ -1,4 +1,6 @@
 # Font Awesome 
+![image](https://user-images.githubusercontent.com/61460836/158287244-50b14d27-ce1a-4331-8907-2e9c83386d9e.png)
+
 1. 코어 설치
     ```bash
     $ npm i @fortawesome/fontawesome-svg-core
@@ -12,3 +14,4 @@
     $ npm i @fortawesome/free-regular-svg-icons
     $ npm i @fortawesome/free-brands-svg-icons
     ```
+3. App.js
