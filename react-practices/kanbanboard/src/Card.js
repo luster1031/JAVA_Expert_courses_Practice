@@ -1,14 +1,13 @@
 import React from 'react'
 import TaskList from './TaskList'
-import './assets/css/Card.css'
+import style from './assets/css/Card.css'
 
-const Card = ({title, cards})  => {
-  console.log( title);
+const Card = ({cardNo, card})  => {
   return (
-    <div>
-      <div className='Card_Title'>{title}</div>
-      <div className='Card__Details'>{cards.description}</div>
-      <TaskList cards={cards}/>
+    <div className={style.Card}>
+      <div className={style.Card__Title} >{card.title}</div>
+      <div className={style.Card__Details}>{card.description}</div>
+      <TaskList tasks={card.tasks}/>
     </div>
   )
 }

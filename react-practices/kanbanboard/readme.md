@@ -1,3 +1,7 @@
+# kanbanboard
+![image](https://user-images.githubusercontent.com/61460836/158583972-8d75be31-8a38-45e2-9ec0-190663631c76.png)
+
+
 1. 설치 
     ```bash
     $ npm i
@@ -33,3 +37,8 @@
     })
     console.log(result);
     ```
++ key값이 꼭 필요함
+
+
+
+

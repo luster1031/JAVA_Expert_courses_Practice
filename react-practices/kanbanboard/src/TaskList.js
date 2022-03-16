@@ -1,11 +1,14 @@
 import React from 'react'
-import './assets/css/TaskList.css'
+import Task from './Task'
 
-const TaskList = ({cards}) => {
+const TaskList = ({tasks}) => {
   return (
     <div>
         <ul>
-            gg
+            {
+              tasks.map((task)=>
+                <Task key={task.no} task={task}/>)
+            }
         </ul>
     </div>
   )
