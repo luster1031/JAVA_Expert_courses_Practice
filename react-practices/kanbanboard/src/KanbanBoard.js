@@ -7,9 +7,9 @@ const KanbanBoard = () => {
     console.log(cards);
     return (
         <div className={styles.KanbanBoard}>
-            <CardList title={'To Do'}/>
-            <CardList title={'In Progress'} />
-            <CardList title={'Done CardList'} />
+            <CardList title={'To Do'} cards={cards.filter(e => e.status === 'ToDo')}/>
+            <CardList title={'In Progress'} cards={cards.filter(e => e.status === 'Done')}/>
+            <CardList title={'Done CardList'} cards={cards.filter(e => e.status === 'Doing')}/>
         </div>
     )
 }
