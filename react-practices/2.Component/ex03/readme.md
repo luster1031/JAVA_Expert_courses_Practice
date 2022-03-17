@@ -8,7 +8,7 @@
     1. 제어 컴포넌트/비제어 컴포넌트
     2. 상태 컴포넌트
 
-### 06 : Event Handler에서 'ref'사용하기 : Class Component
+### [06 : Event Handler에서 'ref'사용하기 : Class Component](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex03/src/06)
 
 1. 설치 
     ```bash
