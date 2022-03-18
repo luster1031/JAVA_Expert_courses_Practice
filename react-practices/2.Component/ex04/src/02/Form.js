@@ -5,9 +5,9 @@ import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import './assets/Form.css';
 
 export default function Form() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [validEmail, setValidEmail] = useState(false);
+    const [name, setName] = useState("");   //  제어 컴포넌트
+    const [email, setEmail] = useState(""); //  제어 컴포넌트
+    const [validEmail, setValidEmail] = useState(false);    //  UI용
 
     const onChangeInputName = function (e) {
         //  10자 제한
@@ -41,8 +41,8 @@ export default function Form() {
                     null 
                     : (
                         validEmail ? 
-                        <FontAwesomeIcon icon={faCheckCircle} style={{fontSize:16, color:'blue'}} /> 
-                        : <FontAwesomeIcon icon={faTimesCircle} style={{fontSize:16, color:'red'}}/>
+                        <FontAwesomeIcon icon={faCheckCircle} style={{marginLeft:5,fontSize:16, color:'blue'}} /> 
+                        : <FontAwesomeIcon icon={faTimesCircle} style={{marginLeft:5,fontSize:16, color:'red'}}/>
                     )
                 
             }

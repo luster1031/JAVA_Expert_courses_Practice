@@ -12,6 +12,7 @@
     + 함수 컴포넌트에서 상태 변경을 위해 useState 후크 함수에서 반환된 배열의 두번째 배열 요소를 사용한다.
         ```const [val, setVal] = useState(begin)```
 ### 2. 제어 컴포넌트
+1. input, textarea, option 과 같은 폼 컴포넌트 중에 사용자 입력에 따라서 state 값이 변경되고 렌더링 하는 컴포넌트를 제어(Controlled) 컴포넌트라고 한다.
 + src/02 제어 컴포넌트
 + src/03 비제어 컴포넌트
 ### 3. 상태(stateful) 컴포넌트 vs 순수(Pure, Dumb) 컴포넌트

@@ -13,6 +13,10 @@
 + Synthetic Event(이벤트 합성)
 + Event Handler 예제들
 ### [ex04 : State ★](https://github.com/luster1031/JAVA_Expert_courses_Practice/tree/master/react-practices/2.Component/ex04)
+1. 기본 개념
+2. 제어 컴포넌트
+3. 상태 컴포넌트 vs 순수 컴포넌트
+4. DataFlow(Bottom -> up)
 ### ex05 : Component Lifecyle - 생명주기 함수들
 ### ex06 : Immutability(불변성) of Component's state
 + 상태를 건드리면 안되게
