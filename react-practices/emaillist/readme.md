@@ -21,3 +21,28 @@
     ```bash
     $ npm run debug
     ```
+
+
++ `:global(.App)` 안 하면 해싱이 되기 때문에 `import style './'`해줘야한다. 
++ scss
+    + css
+        ```css
+        .Emaillist li a:before {
+            content:'X'
+        }
+        .Emaillist li a:hover, a:visited, a:active {
+            text-decoration: none;
+            color: #fff;
+        }
+        ```
+    + scss
+        ```scss
+        &:before {
+            content:'X'
+        }
+        &:hover, &:visited, &:active {
+            text-decoration: none;
+            color: #fff;
+        }
+        ```
+        + `&`로 바꾼다. 
