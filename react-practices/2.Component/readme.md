@@ -17,12 +17,13 @@
 2. 제어 컴포넌트
 3. 상태 컴포넌트 vs 순수 컴포넌트
 4. DataFlow(Bottom -> up)
-### ex05 : Component Lifecyle - 생명주기 함수들
-### ex06 : Immutability(불변성) of Component's state
+
+### ex05 : Immutability(불변성) of Component's state
 + 상태를 건드리면 안되게
     + 랜더링만 하게 
     + 컴포넌트마다 표현하는 것이 다 다르다.
 
+### ex06 : Component Lifecyle - 생명주기 함수들
 ### AJAX - 통신 : fetch(ES6 표준), axios
 + kanbanborad
 + emaillist
