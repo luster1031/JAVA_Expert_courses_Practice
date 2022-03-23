@@ -1,4 +1,4 @@
-const ex01 = function (param, callback) { //  파라미터 요청하고 맨 끝에 callback넣음
+const fetch = function (param, callback) { //  파라미터 요청하고 맨 끝에 callback넣음
     //  
     //  비동기 코드 : 파일 시스템 접근, 네트워크통신, SQL to DB, setTimeout
     //  
@@ -16,7 +16,7 @@ const ex01 = function (param, callback) { //  파라미터 요청하고 맨 끝�
 
 //  test 01 : success
 // ex01("http://192.168.0.1/api");
-ex01('param-data', function (error, res) { //  callback의 규칙 : 첫번째 자리에 error넣고, 두번째 자리에 res
+fetch('param-data', function (error, res) { //  callback의 규칙 : 첫번째 자리에 error넣고, 두번째 자리에 res
     if (error) {
         console.error(error);
     } else {
@@ -27,8 +27,8 @@ ex01('param-data', function (error, res) { //  callback의 규칙 : 첫번째 �
 })
 
 
-//  test 02 : success
-ex01('param-error', function (error, res) { 
+//  test 02 : fail
+fetch('param-error', function (error, res) { 
     if (error) {
         console.error(error);
     } else {
