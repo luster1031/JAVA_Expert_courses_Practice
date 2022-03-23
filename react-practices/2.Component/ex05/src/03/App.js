@@ -5,13 +5,32 @@ import Clock from './Clock';
 export default class App extends Component {
     constructor() {
         super(...arguments);
+
+        this.state = this.getCurrentClockTime();
+
+    }
+
+    getCurrentClockTime(){
+        const date = new Date();
+        const hours =date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        const session = hours > 12 ? 'am' : 'pm';
+
+        return {
+            
+        };
     }
 
     render() {
         return (
             <div className='clock-display'>
                 <h2>ex05 - Component LifeCycle Practice</h2>
-                    <Clock />
+                    <Clock 
+                        hours={10}
+                        minutes={20}
+                        seconds={40}
+                        session={'am'}/>
             </div>
         );
     }

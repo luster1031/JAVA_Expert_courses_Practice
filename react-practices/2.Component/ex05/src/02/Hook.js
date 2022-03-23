@@ -7,6 +7,7 @@ export default function Hook({ color }) {
 
     /**
      *   1. Alternative 01: getDerivedStateFromProps
+     *      두번 호출 됨
      */
     if(boxColor !== color ) {
         setBoxColor(color);
