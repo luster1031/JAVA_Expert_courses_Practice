@@ -1,10 +1,9 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect} from 'react'
 import './assets/scss/App.scss'
 import RegisterFom from './RegisterFom'
 import Searchbar from './Searchbar'
 import Emaillist from './Emaillist'
 import data from './assets/json/data.json'
-import { useEffect } from 'react/cjs/react.production.min'
 
 const App = () => {
   const [emails, setEmails]= useState(data);
@@ -21,6 +20,18 @@ const App = () => {
       body:null
     });
     console.log(response);
+    if(!response.ok){
+      console.log("error", response.status, response.statusText);
+      return;
+    }
+
+    const json = await response.json();
+    if(json.result !== 'success'){
+      console.log("error", json.message);
+      return;
+    }
+
+    setEmails(json.data);
   },[]);
 
   const notifyKeywordChange = function(keyword) {
