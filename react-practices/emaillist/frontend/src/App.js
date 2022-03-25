@@ -67,9 +67,14 @@ const App = () => {
       cosnoel.log(err);
     }
   }
+
+  const notifyEmailAdd =function(email){
+    console.log(email);
+    console.log('post /api호출');
+  }
   return (
     <div className={'App'}>
-      <RegisterFom />
+      <RegisterFom callback={notifyEmailAdd}/>
       <Searchbar callback={notifyKeywordChange} />
       <Emaillist emails={emails} />
     </div>
