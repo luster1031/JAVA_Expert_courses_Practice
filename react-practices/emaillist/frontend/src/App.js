@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './assets/scss/App.scss'
 import RegisterFom from './RegisterFom'
 import Searchbar from './Searchbar'
@@ -6,42 +6,72 @@ import Emaillist from './Emaillist'
 import data from './assets/json/data.json'
 
 const App = () => {
-  const [emails, setEmails]= useState(data);
-  const [keyword, setKeyword] = useState('');
+  const [emails, setEmails] = useState([]);
+  // const [keyword, setKeyword] = useState('');
 
 
-  useEffect(async ()=>{
-    const response = await fetch('/api',{
-      method:'get',
-      headers:{
-        'Content-Type':'application/json',
-        'Accept':'application/json'
-      },
-      body:null
-    });
-    console.log(response);
-    if(!response.ok){
-      console.log("error", response.status, response.statusText);
-      return;
+  useEffect(async () => {
+    try {
+      const response = await fetch('/api', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: null
+      });
+
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setEmails(json.data);
+    } catch (err) {
+      cosnoel.log(err);
     }
+  }, []);
 
-    const json = await response.json();
-    if(json.result !== 'success'){
-      console.log("error", json.message);
-      return;
+  const notifyKeywordChange = async function (keyword) {
+    console.log("/api?kw=" + keyword);
+    // setEmails(data.filter(e => e.firstName.indexOf(keyword) != -1 || e.lastName.indexOf(keyword) != -1 || e.email.indexOf(keyword) != -1));
+    try {
+      const response = await fetch(`/api?kw=${keyword}`, {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: null
+      });
+
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setEmails(json.data);
+    } catch (err) {
+      cosnoel.log(err);
     }
-
-    setEmails(json.data);
-  },[]);
-
-  const notifyKeywordChange = function(keyword) {
-    setEmails(data.filter(e => e.firstName.indexOf(keyword) != -1 || e.lastName.indexOf(keyword) != -1 || e.email.indexOf(keyword) != -1));
   }
   return (
     <div className={'App'}>
       <RegisterFom />
-      <Searchbar callback={notifyKeywordChange}/>
-      <Emaillist emails={emails}/>
+      <Searchbar callback={notifyKeywordChange} />
+      <Emaillist emails={emails} />
     </div>
   )
 }

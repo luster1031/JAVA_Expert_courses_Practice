@@ -7,12 +7,6 @@ spring:
 # common spring boot configuration
 spring:
    mvc:
-
-      # Spring MVC View Prefix/Suffix
-      view:
-         prefix: /WEB-INF/views/
-         suffix: .jsp
-
       # Path pattern used for static resources
       static-path-pattern: /assets/**
 
@@ -33,10 +27,23 @@ spring:
    # datasource
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
-      url: jdbc:mysql://192.168.0.69:3306/webdb?characterEncoding=utf8
+      url: jdbc:mysql://192.168.0.69:3307/webdb?characterEncoding=utf8
       username: webdb
       password: webdb
-
+---
+# dev profile: spring boot configuration
+# 배포할때 activate -> production으로 바뀌는데 dev일때만, livereload를 true로 함
+spring:
+   config:
+      activate:
+         on-profile: dev
+         
+#devtools-live reload
+   devtools:
+      livereload:
+         enabled: true 
+   
+   
 ---
 # mybatis
 mybatis:
@@ -45,10 +52,9 @@ mybatis:
 ---
 # server
 server:
-   port: 8080
+   port: 8888
    servlet:
       context-path: /
       encoding:
          charset: UTF-8
          enabled: true
-
