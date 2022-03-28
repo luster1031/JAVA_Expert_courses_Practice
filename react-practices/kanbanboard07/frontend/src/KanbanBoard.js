@@ -2,7 +2,8 @@
 import React from 'react'
 import CardList from './CardList'
 import styles from './assets/css/KanbanBoard.css'
-import cards from './data.json';
+// import cards from './data.json';
+
 const KanbanBoard = () => {
     return (
         <div className={styles.KanbanBoard}>

@@ -4,7 +4,8 @@
 
 1. 설치 
     ```bash
-    $ npm i
+    npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader node-sass sass-loader babel-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime @babel/plugin-syntax-throw-expressions 
+    npm i react react-dom prop-types
     ```
 2. 설정 
     + babel.config.json
@@ -12,13 +13,17 @@
 3. 스크립트 추가하기
     ```json
         "scripts": {
-            "start": "npx webpack serve --progress --mode development ",
-            "build": "npx webpack"
+            "build": "npm run build:frontend && npm run build:backend",
+            "build:frontend": "npx webpack --config config/webpack.config.js --mode production", 
+            "build:backend": "cd ../backend && mvn clean package",
+            "dev": "",
+            "dev:frontend": "npx webpack serve --config config/webpack.config.js --progress --mode development",
+            "dev:backend": "cd ../backend && mvn spring-boot:run"
         },
     ```
 4. 실행
     ```bash
-    $ npm start
+    $ npm run dev:frontend
     ```
 
 
@@ -48,3 +53,5 @@
     + data.json에 찾아서 없앰
     + 우린 상태 변화시킴 
 + render가 다시 되면서 없어짐(다시 DOM에 그림 -> react가 해줌)
+
+
