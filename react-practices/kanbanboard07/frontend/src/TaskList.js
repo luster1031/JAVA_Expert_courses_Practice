@@ -1,15 +1,17 @@
 import React from 'react'
 import Task from './Task'
 
-const TaskList = ({tasks}) => {
+const TaskList = ({ tasks }) => {
   return (
     <div>
-        <ul>
-            {
-              tasks.map((task)=>
-                <Task key={task.no} task={task}/>)
-            }
-        </ul>
+      <ul>
+        {
+          tasks ?
+            tasks.map((task) =>
+              <Task key={task.no} task={task} />)
+            : null
+        }
+      </ul>
     </div>
   )
 }
