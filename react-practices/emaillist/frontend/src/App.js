@@ -68,13 +68,37 @@ const App = () => {
     }
   }
 
-  const notifyEmailAdd =function(email){
+  const notifyEmailAdd = async function (email) {
     console.log(email);
     console.log('post /api호출');
+    try {
+      const response = await fetch('/api', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(email)
+      });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setEmails([json.data, ...emails]);
+    } catch (err) {
+      console.log(err);
+    }
   }
   return (
     <div className={'App'}>
-      <RegisterFom callback={notifyEmailAdd}/>
+      <RegisterFom callback={notifyEmailAdd} />
       <Searchbar callback={notifyKeywordChange} />
       <Emaillist emails={emails} />
     </div>
