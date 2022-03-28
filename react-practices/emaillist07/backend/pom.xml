@@ -11,7 +11,8 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>emaillist</artifactId>
-	<version>0.0.1-SNAPSHOT</version>	<name>emaillist</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>emaillist07</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -65,7 +66,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>emaillist</finalName>
+		<finalName>emaillist07</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
