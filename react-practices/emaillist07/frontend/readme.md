@@ -13,13 +13,17 @@
 3. 스크립팅 
     ```json
       "scripts": {
-            "debug": "npx webpack serve --progress --mode development",
-            "build": "npx webpack"
+            "build": "npm run build:frontend && npm run build:backend",
+            "build:frontend": "npx webpack --config config/webpack.config.js --mode production", 
+            "build:backend": "cd ../backend && mvn clean package",
+            "dev": "",
+            "dev:frontend": "npx webpack serve --config config/webpack.config.js --progress --mode development",
+            "dev:backend": "cd ../backend && mvn spring-boot:run"
         },
     ```
 4. 실행
     ```bash
-    $ npm run debug
+    $ npm run dev:frontend
     ```
 
 
