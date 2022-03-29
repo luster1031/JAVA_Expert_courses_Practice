@@ -26,4 +26,8 @@ public class CardRepository {
 	public Boolean insert(TaskVo vo) {
 		return sqlsession.insert("task.addTask", vo) == 1;
 	}
+
+	public boolean delete(Long no) {
+		return sqlsession.delete("task.deleteTask", no) == 1;
+	}
 }

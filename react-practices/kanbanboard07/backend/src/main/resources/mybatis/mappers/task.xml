@@ -24,4 +24,11 @@
 				values(null, #{name}, 'N', #{no})
 		]]>
 	</insert>
+	<delete id="deleteTask" parameterType="long">
+		<![CDATA[
+			delete
+				from task
+				where no = ${no}
+		]]>
+	</delete>
 </mapper>

@@ -1,10 +1,8 @@
 import React, {useState} from 'react'
 import styles from './assets/css/Task.css';
 
-const Task = ({name, done,no}) => {
-    const removeNo = async function (no){
-
-    }
+const Task = ({name, done, no, removeNo}) => {
+    
   return (
     <li className={styles.TaskList__Task}>
         <input
@@ -15,7 +13,7 @@ const Task = ({name, done,no}) => {
           readOnly
           />
         {name}
-        <a href='#' className={styles.TaskList__Task__remove}></a>
+        <a href="#" onClick={()=>{removeNo(no)}} className={styles.TaskList__Task__remove}></a>
     </li>
   );
 }

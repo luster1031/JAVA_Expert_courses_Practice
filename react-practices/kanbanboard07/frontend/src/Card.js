@@ -34,6 +34,67 @@ const Card = ({ cardNo, card }) => {
     }
   }
 
+  const addValue = async function (value) {
+
+    var data = new Object();
+    data.no = no;
+    data.name = value;
+    try {
+      const response = await fetch(`/api/task`, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setTask([json.data, ...task]);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+  const removeNo = async function (no) {
+    
+    var data = new Object();
+    data.no = no;
+    console.log(JSON.stringify(data));
+    try {
+      const response = await fetch(`/api/delete`, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== 'success') {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+      setTask(task.filter(t => t.no !== no));
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const toggleClass = () => {
     if (!showDetails) {
@@ -41,6 +102,7 @@ const Card = ({ cardNo, card }) => {
     }
     setShowDetails(!showDetails);
   }
+
   return (
     <div className={style.Card}>
       <div
@@ -52,7 +114,7 @@ const Card = ({ cardNo, card }) => {
         showDetails ?
           <div className={style.Card__Details}>
             {card.description}
-            <TaskList no={cardNo} tasks={task} callback={readTask} />
+            <TaskList no={cardNo} tasks={task} addValue={addValue} removeNo={removeNo} />
           </div> : null
       }
 

@@ -43,4 +43,15 @@ public class ApiController {
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(vo));
 	}
+	
+	@PostMapping("/delete")
+	public ResponseEntity<JsonResult> delete(@RequestBody TaskVo vo) {
+		System.out.println("delete");
+		System.out.println(vo);
+		cardRepository.delete(vo.getNo());
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(JsonResult.success(vo));
+	}
+	
 }
