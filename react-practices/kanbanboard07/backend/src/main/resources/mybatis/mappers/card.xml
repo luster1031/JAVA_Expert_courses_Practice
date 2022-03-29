@@ -4,7 +4,7 @@
 
 	<select id="findAll" resultType="cardvo">
 		<![CDATA[	
-   		  select *
+   		  select no, title, description, status 
      		    from card
  		    order by no desc
 		]]>

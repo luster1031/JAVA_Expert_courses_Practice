@@ -8,7 +8,7 @@ const CardList = ({title, cards}) => {
             <h1>{title}</h1>
             {
                 cards.map((card)=> 
-                    <Card key={card.no} card={card}/>)
+                    <Card key={card.no} cardNo={card.no} card={card}/>)
             }
         </div>
     )
