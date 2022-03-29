@@ -3,8 +3,9 @@ import Task from './Task'
 import style from './assets/css/TaskList.css'
 import { object } from 'prop-types';
 
-const TaskList = ({ no, tasks, addValue,removeNo }) => {
-  
+const TaskList = ({ no, tasks, addValue,removeNo,update_check }) => {
+  console.log("taskList");
+  console.log(tasks);
   return (
     <ul>
       {
@@ -15,6 +16,7 @@ const TaskList = ({ no, tasks, addValue,removeNo }) => {
             done={task.done}
             no={task.no}
             removeNo={removeNo}
+            update_check={update_check}
             />)
       }
 
@@ -25,7 +27,7 @@ const TaskList = ({ no, tasks, addValue,removeNo }) => {
         onKeyPress={e => {
           if (e.key === 'Enter') {
             console.log(`call notifyAddTask(${e.target.value})`);
-            addValue(e.target.value);
+            addValue(e.target.value,no);
             e.target.value = '';
           }
         }}></input>

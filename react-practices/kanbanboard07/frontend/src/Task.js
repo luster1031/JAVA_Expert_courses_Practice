@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styles from './assets/css/Task.css';
 
-const Task = ({name, done, no, removeNo}) => {
+const Task = ({name, done, no, removeNo,update_check}) => {
     
   return (
     <li className={styles.TaskList__Task}>
@@ -9,7 +9,7 @@ const Task = ({name, done, no, removeNo}) => {
           type='checkbox'
           checked={done === 'Y'}
           defaultValue={done}
-          onClick={e => {}} 
+          onClick={e => {update_check(done, no)}} 
           readOnly
           />
         {name}

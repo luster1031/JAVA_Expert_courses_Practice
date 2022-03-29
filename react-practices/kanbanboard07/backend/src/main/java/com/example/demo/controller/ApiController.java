@@ -37,7 +37,6 @@ public class ApiController {
 	
 	@PostMapping("/task")
 	public ResponseEntity<JsonResult> create(@RequestBody TaskVo vo) {
-		System.out.println(vo);
 		cardRepository.insert(vo);
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -46,12 +45,17 @@ public class ApiController {
 	
 	@PostMapping("/delete")
 	public ResponseEntity<JsonResult> delete(@RequestBody TaskVo vo) {
-		System.out.println("delete");
-		System.out.println(vo);
 		cardRepository.delete(vo.getNo());
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(vo));
 	}
-	
+	@PostMapping("/update")
+	public ResponseEntity<JsonResult> update(@RequestBody TaskVo vo) {
+		System.out.println(vo);
+		cardRepository.update(vo);
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(JsonResult.success(vo));
+	}
 }
