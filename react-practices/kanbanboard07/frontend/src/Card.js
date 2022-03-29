@@ -71,8 +71,9 @@ const Card = ({ cardNo, card }) => {
   const addValue = async function (value, no) {
 
     var data = new Object();
-    data.no = no;
+    data.card_no = no;
     data.name = value;
+    console.log(data);
     try {
       const response = await fetch(`/api/task`, {
         method: 'post',
@@ -92,7 +93,6 @@ const Card = ({ cardNo, card }) => {
       if (json.result !== 'success') {
         throw new Error(`${json.result} ${json.message}`);
       }
-
       setTask([json.data, ...task]);
     } catch (err) {
       console.log(err);

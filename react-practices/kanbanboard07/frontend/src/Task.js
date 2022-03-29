@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styles from './assets/css/Task.css';
 
 const Task = ({name, done, no, removeNo,update_check}) => {
-    
+  console.log(no);
   return (
     <li className={styles.TaskList__Task}>
         <input

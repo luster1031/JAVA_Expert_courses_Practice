@@ -37,6 +37,7 @@ public class ApiController {
 	
 	@PostMapping("/task")
 	public ResponseEntity<JsonResult> create(@RequestBody TaskVo vo) {
+		
 		cardRepository.insert(vo);
 		return ResponseEntity
 				.status(HttpStatus.OK)

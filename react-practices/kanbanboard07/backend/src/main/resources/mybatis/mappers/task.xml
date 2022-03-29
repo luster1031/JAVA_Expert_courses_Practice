@@ -21,7 +21,7 @@
 		<![CDATA[
 			insert
 				into task
-				values(null, #{name}, 'N', #{no})
+				values(null, #{name}, 'N', #{card_no})
 		]]>
 	</insert>
 	<delete id="deleteTask" parameterType="long">
