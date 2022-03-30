@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import TaskList from './TaskList'
-import style from './assets/css/Card.css'
+import style from './assets/scss/Card.scss'
 
 const Card = ({ cardNo, card }) => {
   const [showDetails, setShowDetails] = useState(false);
