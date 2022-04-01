@@ -10,7 +10,7 @@ import Setting from "./component/user/Settings";
 import Join from "./component/user/Join";
 import Error4040 from "./component/error/Error404";
 import Me from "./component/about/Me";
-
+import Location from "./component/about/Location";
 import './assets/scss/App.scss'
 
 export default function App() {
@@ -20,13 +20,14 @@ export default function App() {
                 <Route path='/' element={<Main />} />
                 <Route path='gallery' element={<Gallery />} />
                 <Route path='guestbook' element={<Guestbook />} />
-                <Route exact path='about' element={<About />}>
-                    <Route path='me' element={<Me />}/>
+                <Route element={<About />}>
+                    <Route path='about/me' element={<Me />}/>
+                    <Route path='about/location' element={<Location />}/>
                 </Route>
                 <Route path='/user/login' element={<Login />} />
                 <Route path='/user/settings' element={<Setting />} />
                 <Route path='/user/join' element={<Join />} />
-                <Route path='*' element={<Error4040 />} />
+                <Route path='*' element={</*Main*/Error4040 />} />
             </Routes>
         </Router>
     );

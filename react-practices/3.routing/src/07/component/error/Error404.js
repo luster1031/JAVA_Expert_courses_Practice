@@ -2,6 +2,9 @@ import React from 'react';
 import SiteLayout from "../../layout/SiteLayout";
 
 export default function Gallery() {
+    /*/
+    window.location.href='/';   //  그냥 에러에 main으로 해놓는게 나음
+    /*/
     return (
         <SiteLayout>
             <div>
@@ -12,4 +15,5 @@ export default function Gallery() {
             </div>
         </SiteLayout>
     );
+    //*/
 }
