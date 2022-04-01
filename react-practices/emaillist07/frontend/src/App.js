@@ -96,6 +96,7 @@ const App = () => {
       console.log(err);
     }
   }
+  
   return (
     <div className={'App'}>
       <RegisterFom callback={notifyEmailAdd} />
