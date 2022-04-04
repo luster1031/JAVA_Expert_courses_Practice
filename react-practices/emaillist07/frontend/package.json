@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --config config/webpack.config.js --mode production", 
+    "build": "npm install && npx webpack --config config/webpack.config.js --mode production", 
     "start": "npx webpack serve --config config/webpack.config.js --progress --mode development"
    
   },
