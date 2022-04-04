@@ -8,7 +8,7 @@ const Card = ({ cardNo, card }) => {
 
   const update_check = async function (done, no){
     var data = new Object();   
-    data.done = done=='N' ? 'Y' : 'N';
+    data.done = done==='N' ? 'Y' : 'N';
     data.no = no;
     try {
       const response = await fetch(`/api/update`, {
