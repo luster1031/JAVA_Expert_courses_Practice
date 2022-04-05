@@ -19,6 +19,7 @@ public class GuestbookService {
 	}
 	
 	@Transactional
+	//	둘다 성공해야, 두개의 sql이 반영이 됨
 	public boolean deleteMessage(Long no, String password) {
 		GuestbookVo vo = new GuestbookVo();
 		vo.setNo(no);
@@ -27,7 +28,7 @@ public class GuestbookService {
 		return guestbookRepository.delete(vo);
 		
 //		vo.setNo(null);
-//		vo.setName("안대혁");
+//		vo.setName("임한나");
 //		vo.setMessage("테스트");
 //		vo.setPassword("1234");
 //		guestbookRepository.insert(vo);

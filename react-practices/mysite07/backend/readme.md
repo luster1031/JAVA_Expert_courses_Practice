@@ -32,10 +32,34 @@ $ java -Dspring.profiles.active=production -jar MySite07.jar
             static-locations: classpath:/static/, file:D:/mysite-uploads/
 ```
 + frontend는 /assets/가 없어서
-```js
-proxy: {
-            '/api': 'http://localhost:8080',
-            '/assets/gallery': 'http://localhost:8080'
-        },
-```
-+ proxy 추가
+    ```js
+    proxy: {
+                '/api': 'http://localhost:8080',
+                '/assets/gallery': 'http://localhost:8080'
+            },
+    ```
+    + proxy 추가
+
+
+### Transaction
++ backend
+    ```java
+    @Transactional
+    //	둘다 성공해야, 두개의 sql이 반영이 됨
+    public boolean deleteMessage(Long no, String password) {
+        GuestbookVo vo = new GuestbookVo();
+        vo.setNo(no);
+        vo.setPassword(password);
+        
+        guestbookRepository.delete(vo);
+        
+        vo.setNo(null);
+        vo.setName("임한나");
+        vo.setMessage("테스트");
+        vo.setPassword("1234");
+        guestbookRepository.insert(vo);
+        return true;
+    }
+    ```
+    + delete, insert 둘 다 성공하면 둘 다 반영이 됨,
+    + 하나라도 실패하면 반영이 안 됨.
