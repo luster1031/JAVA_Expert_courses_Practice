@@ -10,4 +10,8 @@ public class LandingController {
 	public String index() {
 		return "index";
 	}
+	
+	@RequestMapping("favicon.ico")
+	public void returnNoFavicon() {	
+	}
 }
