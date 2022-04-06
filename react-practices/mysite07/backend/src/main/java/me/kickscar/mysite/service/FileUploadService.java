@@ -11,7 +11,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FileUploadService {
-	private static String SAVE_PATH = "E:/mysite-uploads/gallery";
+//	@Value("mysite.upload.path")
+//	private static String SAVE_PATH = "E:/mysite-uploads/gallery";
+	private static String SAVE_PATH = "/mysite-uploads/gallery";
 	private static String URL_BASE = "/assets/gallery";	
 	
 	public String restoreImage(MultipartFile file) throws RuntimeException {
